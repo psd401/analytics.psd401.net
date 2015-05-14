@@ -69,6 +69,11 @@ To deploy the site using `s3cmd`, production settings, and a **5 minute cache ti
 make production && s3cmd put --recursive -P --add-header="Cache-Control:max-age=300" _site/* s3://18f-dap/
 ```
 
+psd specific:
+```bash
+make production && s3cmd put --recursive -P --add-header="Cache-Control:max-age=300" _site/* s3://psd-analytics
+```
+
 **Use the full command above.** The full command ensures that the build completes successfully, with production settings, _before_ triggering an upload to the production bucket.
 
 ### Fixing links in the Top 20
